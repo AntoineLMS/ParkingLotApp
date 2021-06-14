@@ -1,6 +1,6 @@
 # ParkingLotApp
 
-Console Application for the coding challenge (Moffet).
+Console Application for the coding challenge (Moffett).
 
 I have added cars (DriverID,RegistrationPlate) in order to test the application. 
 The two fields are randomly generated. The DriverID is generated between 1 and 100, accepted if lower than 75.
