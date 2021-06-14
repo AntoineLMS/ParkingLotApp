@@ -29,20 +29,7 @@ namespace ParkingLotApp
 
         #region Method
 
-        public bool CanMove()
-        {
-            return GetInductiveSensor() && !(EmergencyButton || SafetySensor);
-        }
-        public int CardReader(Car c)
-        {
-            return c.DriverID;
-        }
-
-        public bool AuthorisedDriver(int ID)
-        {
-            return ID < 75;
-        }
-
+        
         public void RunCycle()
         {
             while (true)
@@ -89,6 +76,21 @@ namespace ParkingLotApp
                 Console.WriteLine("Gate closed");
             }
         }
+        #endregion
+        #region GetSensors
+        public bool CanMove()
+        {
+            return GetInductiveSensor() && !(EmergencyButton || SafetySensor);
+        }
+        public int CardReader(Car c)
+        {
+            return c.DriverID;
+        }
+
+        public bool AuthorisedDriver(int ID)
+        {
+            return ID < 75;
+        }
 
         public bool GetInductiveSensor()
         {
@@ -110,7 +112,7 @@ namespace ParkingLotApp
             }      
         }
         #endregion
-
+        
         public Gate()
         {
             this.FullyClose = true;
